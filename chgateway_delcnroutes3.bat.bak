@@ -26,7 +26,7 @@ for /f "tokens=1 delims=\/" %%c in ("%w%") do (
 if exist delcnroutes5.txt (
 		for /f "delims=" %%a in (delcnroutes5.txt) do (
 		set aa=%%a
-rem	Replace net_gateway with %%c,add IF number %t% to file.
+rem	Replace net_gateway with %%c
 		echo !!aa:net_gateway=%%c!! %t% >>del_cnroutes_cmd_win3.txt
 )
 ) else echo delcnroutes5.txt is not here.
